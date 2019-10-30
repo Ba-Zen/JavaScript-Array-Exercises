@@ -49,20 +49,27 @@ const saleProducts = products.map(product => {
 // }, 0);
 // console.log(result);
 
-const scores = [
-  { player: 'Bob', score: 70 },
-  { player: 'Barry', score: 30 },
-  { player: 'Bob', score: 80 },
-  { player: 'Baz', score: 90 }
-];
+// const scores = [
+//   { player: 'Bob', score: 70 },
+//   { player: 'Barry', score: 30 },
+//   { player: 'Bob', score: 80 },
+//   { player: 'Baz', score: 90 }
+// ];
 
-const bobTotal = scores.reduce((acc, curr) => {
-  if (curr.player === 'Bob') {
-    acc += curr.score;
-  }
-  return acc;
-}, 0);
+// const bobTotal = scores.reduce((acc, curr) => {
+//   if (curr.player === 'Bob') {
+//     acc += curr.score;
+//   }
+//   return acc;
+// }, 0);
 
-console.log(bobTotal);
+//console.log(bobTotal);
 
 // commit after cuhhh
+
+// Find Method -  returns first value that passes certain condition
+
+const scores = [10, 20, 30, 40, 70, 90, 30];
+
+const firstHighScore = scores.find(score => score > 50);
+console.log(firstHighScore);
