@@ -69,7 +69,46 @@ const saleProducts = products.map(product => {
 
 // Find Method -  returns first value that passes certain condition
 
-const scores = [10, 20, 30, 40, 70, 90, 30];
+// const scores = [10, 20, 30, 40, 70, 90, 30];
 
-const firstHighScore = scores.find(score => score > 50);
-console.log(firstHighScore);
+// const firstHighScore = scores.find(score => score > 50);
+// console.log(firstHighScore);
+
+// Sort Method
+const names = ['tastas', 'shaun', 'chun-li', 'yoshi', 'baba-zen'];
+
+// names.sort();
+// names.reverse();
+// // sort changes orgiinal array
+// console.log(names);
+
+const scores = [10, 20, 30, 40, 70, 90, 5];
+
+// scores.sort();
+// scores.reverse();
+// console.log(scores);
+
+scores.sort((a, b) => b - a);
+console.log(scores);
+
+const players = [
+  { name: 'Bob', score: 70 },
+  { name: 'Barry', score: 30 },
+  { name: 'Brian', score: 80 },
+  { name: 'Baz', score: 90 },
+  { name: 'Barack', score: 40 }
+];
+
+// players.sort((a, b) => {
+//   if (a.score > b.score) {
+//     return -1;
+//   } else if (b.score > a.score) {
+//     return 1;
+//   } else {
+//     return 0;
+//   }
+// });
+
+players.sort((a, b) => b.score - a.score);
+
+console.log(players);
