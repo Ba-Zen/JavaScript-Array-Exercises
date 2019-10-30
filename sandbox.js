@@ -23,19 +23,19 @@ const prices = [20, 10, 30, 25, 15, 40, 80, 5];
 const salePrices = prices.map(price => price / 2);
 //console.log(salePrices);
 
-const products = [
-  { name: 'gold star', price: 20 },
-  { name: 'mushroom', price: 40 },
-  { name: 'green shells', price: 30 },
-  { name: 'banana', price: 10 },
-  { name: 'red shells', price: 50 }
-];
+// const products = [
+//   { name: 'gold star', price: 20 },
+//   { name: 'mushroom', price: 40 },
+//   { name: 'green shells', price: 30 },
+//   { name: 'banana', price: 10 },
+//   { name: 'red shells', price: 50 }
+// ];
 
-const saleProducts = products.map(product => {
-  return product.price > 30
-    ? { name: product.name, price: product.price / 2 } // protect original array by creating new object
-    : product;
-});
+// const saleProducts = products.map(product => {
+//   return product.price > 30
+//     ? { name: product.name, price: product.price / 2 } // protect original array by creating new object
+//     : product;
+// });
 //console.log(saleProducts);
 
 // Reduce Method
@@ -112,3 +112,25 @@ const players = [
 players.sort((a, b) => b.score - a.score);
 
 console.log(players);
+
+// Chaining methods
+
+const products = [
+  { name: 'gold star', price: 30 },
+  { name: 'mushroom', price: 10 },
+  { name: 'green shells', price: 40 },
+  { name: 'banana', price: 5 },
+  { name: 'red shells', price: 50 }
+];
+
+// const filtered = products.filter(product => product.price > 20);
+
+// const promos = filtered.map(product => {
+//   return `The ${product.name} is ${product.price / 2} dollars.`;
+// });
+
+const promos = products
+  .filter(product => product.price > 20)
+  .map(product => `The ${product.name} is ${product.price / 2} dollars.`);
+
+console.log(promos);
